@@ -63,9 +63,6 @@ public class ArticleListActivity extends AppCompatActivity implements
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
 
-
-        //final View toolbarContainerView = findViewById(R.id.toolbar_container);
-
         mSwipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipe_refresh_layout);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
@@ -77,7 +74,9 @@ public class ArticleListActivity extends AppCompatActivity implements
     }
 
     private void refresh() {
+
         startService(new Intent(this, UpdaterService.class));
+
     }
 
     @Override
@@ -218,14 +217,17 @@ public class ArticleListActivity extends AppCompatActivity implements
     private void showSnackBar(){
         final Snackbar snackbar = Snackbar.make(mRecyclerView, getString(R.string.action_refresh), Snackbar.LENGTH_LONG);
 
-        snackbar.setActionTextColor(Color.CYAN).setAction("Message", new View.OnClickListener() {
+        snackbar.setActionTextColor(Color.CYAN).setAction(getString(R.string.action_refresh), new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getApplicationContext(), "Finish", Toast.LENGTH_LONG).show();
+                refresh();
             }
         });
 
         snackbar.show();
 
     }
+
+
 }

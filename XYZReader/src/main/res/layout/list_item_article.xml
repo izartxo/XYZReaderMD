@@ -33,9 +33,9 @@
             android:paddingTop="16dp"
             android:paddingRight="16dp"
             android:paddingBottom="4dp"
-            android:textColor="@color/ltgray"
+            android:textColor="@color/primary_text"
             android:ellipsize="end"
-            android:maxLines="4" />
+            android:lines="3" />
 
         <TextView
             android:id="@+id/article_subtitle"
@@ -45,8 +45,8 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:paddingBottom="16dp"
-            android:textColor="#6000"
-            android:maxLines="2"
+            android:textColor="@color/dark_primary"
+            android:lines="2"
             android:ellipsize="end" />
     </LinearLayout>
 

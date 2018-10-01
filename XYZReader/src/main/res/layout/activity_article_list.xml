@@ -6,11 +6,11 @@
     android:fitsSystemWindows="true">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar_layout"
+        android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
-        android:layout_height="112dp"
-        android:fitsSystemWindows="true"
+        android:layout_height="110dp"
         android:elevation="4dp"
+        android:fitsSystemWindows="true"
         app:theme="@style/Theme.Bacon">
 
         <android.support.design.widget.CollapsingToolbarLayout
@@ -51,11 +51,10 @@
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:scrollbarStyle="outsideOverlay"
             android:paddingLeft="@dimen/list_side_margin"
             android:paddingRight="@dimen/list_side_margin"
-            android:paddingBottom="@dimen/list_side_margin"/>
+            android:paddingBottom="@dimen/list_side_margin"
+            />
     </android.support.v4.widget.SwipeRefreshLayout>
 
 </android.support.design.widget.CoordinatorLayout>
